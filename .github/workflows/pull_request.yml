@@ -17,7 +17,7 @@ jobs:
         architecture: 'x64'
     
     - name: Instalar librerias
-      uses: pip3 install -r requirements.txt
+      run: pip3 install -r requirements.txt
 
     - name: Correr los Tests
-      uses: python3 -m unittest -v
+      run: python3 -m unittest -v

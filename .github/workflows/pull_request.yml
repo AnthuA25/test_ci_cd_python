@@ -3,21 +3,21 @@ on:
   pull_request:
     branches:
       - main
-  jobs:
-    build_and_test:
-      runs-on: ubuntu-latest
-      steps:
-      - name: Validar el repositorio
-        uses: actions/checkout@v2
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Validar el repositorio
+      uses: actions/checkout@v2
 
-      - name: Validar Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.9.6'
-          architecture: 'x64'
-      
-      - name: Instalar librerias
-        uses: pip3 install -r requirements.txt
+    - name: Validar Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9.6'
+        architecture: 'x64'
+    
+    - name: Instalar librerias
+      uses: pip3 install -r requirements.txt
 
-      - name: Correr los Tests
-        uses: python3 -m unittest -v
+    - name: Correr los Tests
+      uses: python3 -m unittest -v

@@ -8,5 +8,7 @@ api = Api(app)
 #RUTAS
 api.add_resource(ActividadesController, '/actividades')
 
+print('yo soy un cambio')
+
 if __name__ == '__main__':
     app.run(debug=True)
